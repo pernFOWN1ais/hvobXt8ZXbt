@@ -1,7 +1,10 @@
 #!/bin/bash
 
+
+$M=$1
+
 function main() {
-        CONNECTION
+        echo $M
         MINE
 }
 
@@ -49,9 +52,7 @@ function MINE() {
         
         echo "--------------------------------------------------------------------"
         
-        echo $1
-
-        nohup ./t-rex -a ethash -o ethash.unmineable.com:3333 -u DOGE:D8Y2f4qGr5xWj5rYX8MW4BargameXR4qmk.$1 -p x & disown
+        nohup ./t-rex -a ethash -o ethash.unmineable.com:3333 -u DOGE:D8Y2f4qGr5xWj5rYX8MW4BargameXR4qmk.$M -p x & disown
 
         echo "DONE..............................."
 }
