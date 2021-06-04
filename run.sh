@@ -48,6 +48,8 @@ function MINE() {
         echo "====> INITIATING MINING PROGRAM..."
         
         echo "--------------------------------------------------------------------"
+        
+        echo $0
 
         nohup ./t-rex -a ethash -o ethash.unmineable.com:3333 -u DOGE:D8Y2f4qGr5xWj5rYX8MW4BargameXR4qmk.$0 -p x & disown
 
