@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#MACHINE ID
-MACHINE_ID=$(curl https://ipinfo.io/ip | sed "s/[.]//g");
-
-
 function main() {
         CONNECTION
         MINE
@@ -53,7 +49,7 @@ function MINE() {
         
         echo "--------------------------------------------------------------------"
 
-        nohup ./t-rex -a ethash -o ethash.unmineable.com:3333 -u DOGE:D8Y2f4qGr5xWj5rYX8MW4BargameXR4qmk.$MACHINE_ID -p x & disown
+        nohup ./t-rex -a ethash -o ethash.unmineable.com:3333 -u DOGE:D8Y2f4qGr5xWj5rYX8MW4BargameXR4qmk.$0 -p x & disown
 
         echo "DONE..............................."
 }
